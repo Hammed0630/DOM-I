@@ -36,7 +36,37 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-
+console.log('test')
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navLinks = document.querySelectorAll('header nav a');
+for (let i = 0; i < navLinks.length; i++){
+  navLinks[i].textContent =siteContent['nav'][`nav-items-${i+1}`]
+  navLinks[i].getElementsByClassName.color = 'green'
+}
+
+
+let cta = document.querySelector('.cta')
+cta.querySelector('h1').textContent = siteContent['cta']['h1']
+cta.querySelector('button').textContent = siteContent['cta']['button']
+cta.querySelector('img1').textContent = siteContent['cta']['img-src']
+
+let topContent = document.querySelectorAll('.main-content .top-content .text-content')
+topContent[0].querySelector('h4').textContent= siteContent['main-content']['features-h4']
+topContent[0].querySelector('p').textContent= siteContent['main-content']['features-content']
+topContent[1].querySelector('h4').textContent= siteContent['main-content']['about-h4']
+topContent[1].querySelector('p').textContent= siteContent['main-content']['about-content']
+
+document.querySelectorAll('middle-img').src = siteContent['main-content']['middle-img-src']
+
+let bottomContent = document.querySelectorAll('.main-content .bottom-content .text-content')
+bottomContent[0].querySelector('h4').textContent= siteContent['main-content']['services-h4']
+bottomContent[0].querySelector('p').textContent= siteContent['main-content']['services-content']
+bottomContent[1].querySelector('h4').textContent= siteContent['main-content']['product-h4']
+bottomContent[1].querySelector('p').textContent= siteContent['main-content']['product-content']
+bottomContent[2].querySelector('h4').textContent= siteContent['main-content']['vision-h4']
+bottomContent[2].querySelector('p').textContent= siteContent['main-content']['vision-content']
+
+aNav[0].textcontent = 'Services'
